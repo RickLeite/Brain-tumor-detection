@@ -1,0 +1,10 @@
+torch
+opencv-python
+numpy
+torchvision
+matplotlib
+segmentation-models-pytorch
+streamlit
+fastapi
+uvicorn
+python-multipart
