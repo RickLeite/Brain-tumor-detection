@@ -1,1 +1,0 @@
-model artifact goes here
