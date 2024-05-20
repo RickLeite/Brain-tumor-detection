@@ -8,7 +8,7 @@ import torch
 
 device = torch.device('cpu')
 
-model_path = "./model/modelo_segmentacao.pth"
+model_path = "./model/modelo_segmentacao_att.pth"
 model = smp.Unet(
     encoder_name="efficientnet-b7",
     encoder_weights=None,
