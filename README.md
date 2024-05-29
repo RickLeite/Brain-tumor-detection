@@ -67,7 +67,7 @@ model = smp.Unet(
 
 ## Program Integration
 
-The integration project, presented on May 27, 2024, as part of an extension course, demonstrates the seamless connection between the trained model, the API for inference, and a comprehensive Java Spring application for medical professionals. This system was showcased to a panel of professors, Saullo Oliveira and Dimas Augusto, highlighting its functionality and potential in a clinical setting.
+This project was presented on May 27, 2024, as part of an extension project for the Computer Information Systems course, demonstrates the seamless connection between the trained model, the API for inference, and a comprehensive Java Spring application for medical professionals. This system was showcased to a panel of professors, Saullo Oliveira and Dimas Augusto, highlighting its functionality and potential in a clinical setting.
 
 ### Integration Details
 
