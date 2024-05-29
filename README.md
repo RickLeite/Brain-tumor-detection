@@ -1,4 +1,4 @@
-# Brain MRI Segmentation with UNet and EfficientNetB7
+### Brain MRI Segmentation with UNet and EfficientNetB7
 
 This project focuses on the segmentation of brain MRI images using a UNet model with EfficientNetB7 as the backbone. The dataset used in this project is the LGG Segmentation Dataset from Kaggle, which includes brain MRI images and manual FLAIR abnormality segmentation masks.
 
@@ -28,27 +28,20 @@ The notebook demonstrates the training of a segmentation model using UNet archit
 
 ### Model Implementation
 
-The model implementation is purely based and provided to the community by [Abdullah Wagih](https://www.kaggle.com/code/abdallahwagih/brain-tumor-segmentation-unet-efficientnetb7/notebook), an AI Engineer.
+The model implementation is based on and provided to the community by [Abdullah Wagih](https://www.kaggle.com/code/abdallahwagih/brain-tumor-segmentation-unet-efficientnetb7/notebook), an AI Engineer.
 
 ## Project Structure
 
 - **base**: Contains everything related to the model architecture and training.
-    - **data/**: Contains the dataset CSV file based on (image data not included).
-    - **notebook/**: Contain the Jupyter notebook for training the model.
+    - **data/**: Contains the dataset CSV file (image data not included).
+    - **notebook/**: Contains the Jupyter notebook for training the model.
     - **models/**: Directory with the saved trained model.
-- **backend_inference_api**: Contains API developed with fastAPI for the model inference.
+- **backend_inference_api**: Contains the API developed with FastAPI for the model inference.
     - **app/**: Contains the main files for the API.
     - **models/**: Directory with the saved trained model.
     - **requirements.txt**: Required libraries for the API.
-- **program**: Contains the program created with spring.
-    -(**src/main/java/com/demo/**): Contains the main Java files for the program.
-    - **Business/**: Contains the business logic files for the program.
-    - **Controller/**: Contains the controller files for the program.
-    - **Entities/**: Contains the entity files for the program.
-    - **repository/**: Contains the repository files for the program.
-    - **Service/**: Contains the service files for the program.
-    - **ThymeLeafConfiguration/**: Contains the thymeleaf files for the program.
-- **README.md**: Project documentation.
+- **program**: Contains the program created with Java Spring and Postgres for integration.
+    - [Projeto Integrador V](https://github.com/josedurigon/ProjetoIntegradorV): GitHub repository with the integration code.
 
 ## Training
 
@@ -72,10 +65,29 @@ model = smp.Unet(
 )
 ```
 
+## Program Integration
+
+The integration project, presented on May 27, 2024, as part of an extension course, demonstrates the seamless connection between the trained model, the API for inference, and a comprehensive Java Spring application for medical professionals. This system was showcased to a panel of professors, Saullo Oliveira and Dimas Augusto, highlighting its functionality and potential in a clinical setting.
+
+### Integration Details
+
+- **API Development**: The FastAPI-based backend inference API allows for real-time segmentation predictions on new MRI scans. It ensures a quick and reliable interface between the trained model and the Java application.
+- **Java Spring Application**: The Java Spring application, coupled with a Postgres database, provides a user-friendly interface for medical professionals to upload MRI images, retrieve segmentation results, and visualize possible abnormalities.
+### System Workflow
+
+1. **Patient Registration**: The system includes a patient registration feature.
+2. **Image Upload**: Medical professionals can upload MRI images through the user-friendly interface of the Java Spring application.
+3. **Inference Request**: Once uploaded, the MRI images are automatically sent to the FastAPI backend for processing.
+4. **Segmentation Results**: The FastAPI backend utilizes the trained UNet model to analyze the MRI images and generate segmentation masks, identifying potential abnormalities.
+5. **Visualization**: The segmentation results are seamlessly integrated back into the Java Spring application, where they are displayed for doctors to review and analyze, facilitating better diagnostic decisions.
+
+<br><br>
+[![IA MRI MEGACARE SYSTEM](./images/megacare_preview.jpeg)](https://github.com/josedurigon/ProjetoIntegradorV/tree/main/src/main/java/com/example/demo)
+
 
 ## Conclusion
 
-This project demonstrates the effectiveness of using UNet with EfficientNetB7 for brain MRI segmentation. By leveraging state-of-the-art deep learning techniques, we achieve robust segmentation performance, aiding in the analysis and diagnosis of abnormalities
+This project demonstrates the effectiveness of using UNet with EfficientNetB7 for brain MRI segmentation. By leveraging state-of-the-art deep learning techniques, we achieve robust segmentation performance, aiding in the analysis and diagnosis of abnormalities. The integration with a user-friendly application further enhances its practical applicability, providing a valuable tool for medical professionals.
 
 ---
 
@@ -85,5 +97,4 @@ This project demonstrates the effectiveness of using UNet with EfficientNetB7 fo
 - [Computers in Biology and Medicine, 2019](https://arxiv.org/abs/1906.03720)
 - [Brain MRI Segmentation Dataset on Kaggle](https://www.kaggle.com/datasets/mateuszbuda/lgg-mri-segmentation)
 - [Abdullah Wagih's Notebook](https://www.kaggle.com/code/abdallahwagih/brain-tumor-segmentation-unet-efficientnetb7/notebook)
-
----
+- [Projeto Integrador V GitHub Repository](https://github.com/josedurigon/ProjetoIntegradorV)
